@@ -28,7 +28,7 @@ def main(s: str) -> tuple[list[list], list[str]]:
 
 
 if __name__ == "__main__":
-    with open('task2.csv', 'r', encoding='utf-8') as file:
+    with open('task0.csv', 'r', encoding='utf-8') as file:
         s = file.read()
     
     matrix, vertices = main(s)
