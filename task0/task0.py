@@ -1,4 +1,4 @@
-def main(s: str) -> tuple[list[list], list[str]]:
+def main(s: str) -> list[list]:#tuple[list[list], list[str]]:
     edges = s.strip().split('\n')
     
     vertices = set[str]()
@@ -24,16 +24,17 @@ def main(s: str) -> tuple[list[list], list[str]]:
             adjacency_matrix[i][j] = 1
             adjacency_matrix[j][i] = 1
     
-    return adjacency_matrix, sorted_vertices
+    return adjacency_matrix#, sorted_vertices
 
 
 if __name__ == "__main__":
     with open('task0.csv', 'r', encoding='utf-8') as file:
         s = file.read()
     
-    matrix, vertices = main(s)
+    #matrix, vertices = main(s)
+    matrix = main(s)
     
-    print("Вершины:", vertices)
+    #print("Вершины:", vertices)
     print("Матрица смежности:")
     for row in matrix:
         print(row)
